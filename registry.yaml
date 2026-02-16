@@ -4,7 +4,7 @@ packages:
     repo_owner: eeekcct
     repo_name: kreseal
     description: CLI tool for SealedSecret workflows
-    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    asset: "kreseal_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
       - goos: windows
@@ -20,7 +20,7 @@ packages:
     repo_owner: eeekcct
     repo_name: vtag
     description: Git tag helper CLI
-    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    asset: "vtag_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
       - goos: windows
@@ -36,7 +36,7 @@ packages:
     repo_owner: eeekcct
     repo_name: wsx
     description: Workspace utility CLI
-    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    asset: "wsx_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
       - goos: windows
