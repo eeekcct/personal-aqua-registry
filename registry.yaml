@@ -1,0 +1,48 @@
+packages:
+  - name: eeekcct/kreseal
+    type: github_release
+    repo_owner: eeekcct
+    repo_name: kreseal
+    description: CLI tool for SealedSecret workflows
+    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    replacements:
+      linux: Linux
+      darwin: Darwin
+      windows: Windows
+      amd64: x86_64
+
+  - name: eeekcct/vtag
+    type: github_release
+    repo_owner: eeekcct
+    repo_name: vtag
+    description: Git tag helper CLI
+    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    replacements:
+      linux: Linux
+      darwin: Darwin
+      windows: Windows
+      amd64: x86_64
+
+  - name: eeekcct/wsx
+    type: github_release
+    repo_owner: eeekcct
+    repo_name: wsx
+    description: Workspace utility CLI
+    asset: "{{.RepoName}}_{{.OS}}_{{.Arch}}.{{.Format}}"
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    replacements:
+      linux: Linux
+      darwin: Darwin
+      windows: Windows
+      amd64: x86_64
