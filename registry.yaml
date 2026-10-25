@@ -4,6 +4,22 @@ packages:
     repo_owner: eeekcct
     repo_name: kreseal
     description: CLI tool for SealedSecret workflows
+    checksum:
+      type: github_release
+      asset: "kreseal_{{trimV .Version}}_checksums.txt"
+      algorithm: sha256
+      file_format: regexp
+      pattern:
+        checksum: '^([A-Fa-f0-9]{64})\s+'
+        file: '^[A-Fa-f0-9]{64}\s+(\S+)$'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    version_constraint: 'semver(">= 0.1.4")'
+    version_overrides:
+      - version_constraint: 'semver("< 0.1.4")'
+        slsa_provenance:
+          enabled: false
     asset: "kreseal_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
@@ -20,6 +36,22 @@ packages:
     repo_owner: eeekcct
     repo_name: vtag
     description: Git tag helper CLI
+    checksum:
+      type: github_release
+      asset: "vtag_{{trimV .Version}}_checksums.txt"
+      algorithm: sha256
+      file_format: regexp
+      pattern:
+        checksum: '^([A-Fa-f0-9]{64})\s+'
+        file: '^[A-Fa-f0-9]{64}\s+(\S+)$'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    version_constraint: 'semver(">= 0.0.3")'
+    version_overrides:
+      - version_constraint: 'semver("< 0.0.3")'
+        slsa_provenance:
+          enabled: false
     asset: "vtag_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
@@ -36,6 +68,17 @@ packages:
     repo_owner: eeekcct
     repo_name: wsx
     description: Workspace utility CLI
+    checksum:
+      type: github_release
+      asset: "wsx_{{trimV .Version}}_checksums.txt"
+      algorithm: sha256
+      file_format: regexp
+      pattern:
+        checksum: '^([A-Fa-f0-9]{64})\s+'
+        file: '^[A-Fa-f0-9]{64}\s+(\S+)$'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
     asset: "wsx_{{.OS}}_{{.Arch}}.{{.Format}}"
     format: tar.gz
     format_overrides:
