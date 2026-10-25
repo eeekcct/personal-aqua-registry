@@ -52,8 +52,11 @@ Use a registry tag (or commit SHA) containing these verification settings in
 `<registry-tag>` above. Existing configurations pinned to an older registry tag
 will not receive them automatically.
 
-With `checksum.enabled: true` in your `aqua.yaml`, aqua checks each downloaded
-archive against the release's SHA256 checksum manifest. Commit the generated
+With `checksum.enabled: true` in your `aqua.yaml`, aqua verifies downloaded
+archives using the checksums recorded in `aqua-checksums.json`. When no checksum
+is recorded yet, aqua v2.65.2 prefers the GitHub release asset's SHA256 digest
+from the API and falls back to the release's checksum manifest if that digest
+is unavailable. Commit the generated
 `aqua-checksums.json` alongside `aqua.yaml`, and review checksum changes when
 updating package versions. Registry checksum definitions alone do not enable
 this consumer-side setting. An unsigned checksum manifest checks integrity; it
